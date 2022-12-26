@@ -16,7 +16,6 @@ function Products() {
     fetchData();
   }, []);
 
-  console.log(products);
   return (
     <div className={classes.products}>
       <h2>Products</h2>
@@ -26,6 +25,7 @@ function Products() {
           products.map((data) => (
             <Card
               key={data.id}
+              id={data.id}
               title={data.title}
               price={data.price}
               description={data.description}
